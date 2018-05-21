@@ -10,8 +10,9 @@ header{
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  top:0;
+  left:0;
 }
-
 
 nav{
   position: absolute;
@@ -22,12 +23,54 @@ nav{
   top:66px;
   right:0;
   background:#FFF;
-  padding:22px;
   box-sizing: border-box;
   transform: translateX(100%) translateZ(0);
   transition: transform 0.2s ease-in-out;
+  box-shadow: 2px 5px 10px 0 rgba(0,0,0,0.2);
+  overflow: auto;
 }
 
+nav p{
+  margin:0;
+}
+
+nav form, nav li ul li a, nav p{
+  padding:11px;
+  box-sizing: border-box;
+  display:block;
+}
+
+nav li ul{
+  height:0;
+  transform: translateZ(0);
+  transition: 0.2s ease-in-out height;
+  overflow:hidden;
+}
+
+
+nav p{
+  cursor:pointer;
+}
+
+nav li ul li{
+  background:#f2f2f2;
+}
+
+
+nav li ul li:hover,nav p:hover{
+  background:#e2e2e2;
+}
+
+nav form{
+  width:100%;
+}
+
+
+nav form input{
+  width:100%;
+  padding:5px 11px;
+  box-sizing:border-box;
+}
 
 nav.clicked{
   transform: translateX(0) translateZ(0);

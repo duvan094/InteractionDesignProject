@@ -6,28 +6,52 @@ for(var i = 1; i<slider.children.length; i++){
 
 slider.children[0].classList.add("current");
 
+var progressContainer = document.getElementById("sliderProgress");
+
+for(let i = 0; i<slider.children.length; i++){
+  let button = document.createElement("button");
+  button.addEventListener("click", function(event){
+    getSlide(i);
+  },false);
+
+  progressContainer.appendChild(button);
+}
+
+progressContainer.children[0].classList.add("active");
+
+
 var index = 0;
+
+function getSlide(slideIndex){
+  slider.children[slideIndex].classList.remove("previous");
+  slider.children[slideIndex].classList.remove("next");
+  slider.children[slideIndex].classList.add("current");
+
+  progressContainer.children[index].classList.remove("active");
+  index = slideIndex;
+  progressContainer.children[index].classList.add("active");
+
+  for(var i = 0; i<slideIndex; i++){
+    slider.children[i].classList.add("previous");
+    slider.children[i].classList.remove("current");
+    slider.children[i].classList.remove("next");
+  }
+
+  for(var i = slider.children.length-1; i>slideIndex; i--){
+    slider.children[i].classList.add("next");
+    slider.children[i].classList.remove("current");
+    slider.children[i].classList.remove("previous");
+  }
+}
 
 function nextSlide(){
   if(index < slider.children.length-1){
-    slider.children[index].classList.remove("current");
-    slider.children[index].classList.add("previous");
-
-    index += 1;//Increase index
-
-    slider.children[index].classList.remove("next");
-    slider.children[index].classList.add("current");
+    getSlide(index+1);
   }
 }
 
 function previousSlide(){
   if(index > 0){
-    slider.children[index].classList.remove("current");
-    slider.children[index].classList.add("next");
-
-    index -= 1;//Increase index
-
-    slider.children[index].classList.remove("previous");
-    slider.children[index].classList.add("current");
+    getSlide(index-1);
   }
 }

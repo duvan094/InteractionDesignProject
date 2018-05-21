@@ -47,11 +47,15 @@ function getSlide(slideIndex){
 function nextSlide(){
   if(index < slider.children.length-1){
     getSlide(index+1);
+  }else{
+    getSlide(0);
   }
 }
 
 function previousSlide(){
   if(index > 0){
     getSlide(index-1);
+  }else{
+    getSlide(slider.children.length-1);
   }
 }

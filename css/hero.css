@@ -1,7 +1,7 @@
 
 .hero-container{
   min-height: 320px;
-  background:#CCC;
+  background:#222;
   margin-top:66px;
   height: 60vh;
   min-height: 420px;
@@ -108,23 +108,20 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: 0.3s ease-in-out transform, 0.3s ease-in-out opacity;
+  transition: 0.3s ease-in-out transform;
 }
 
 
 .hero.previous{
-  transform:translateX(-100%);
-  opacity: 0;
+  transform:translateX(-100%) translateZ(0);
 }
 
 .hero.current{
-  transform:translateX(0%);
-  opacity: 1;
+  transform:translateX(0%) translateZ(0);
 }
 
 .hero.next{
-  transform:translateX(100%);
-  opacity: 0;
+  transform:translateX(100%) translateZ(0);
 }
 
 .hero .text-container{

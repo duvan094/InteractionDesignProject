@@ -9,7 +9,7 @@ slider.children[0].classList.add("current");
 var index = 0;
 
 function nextSlide(){
-  if(index+1 < slider.children.length){
+  if(index < slider.children.length-1){
     slider.children[index].classList.remove("current");
     slider.children[index].classList.add("previous");
 
@@ -21,7 +21,7 @@ function nextSlide(){
 }
 
 function previousSlide(){
-  if(index > 1){
+  if(index > 0){
     slider.children[index].classList.remove("current");
     slider.children[index].classList.add("next");
 

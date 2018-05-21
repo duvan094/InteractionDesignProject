@@ -12,10 +12,27 @@ header{
   position: fixed;
 }
 
-header nav{
+
+nav{
   position: absolute;
-  display: none;
+  display: block;
+  height:calc(100vh - 66px);
+  width:100%;
+  max-width: 320px;
+  top:66px;
+  right:0;
+  background:#FFF;
+  padding:22px;
+  box-sizing: border-box;
+  transform: translateX(100%) translateZ(0);
+  transition: transform 0.2s ease-in-out;
 }
+
+
+nav.clicked{
+  transform: translateX(0) translateZ(0);
+}
+
 
 header .logo{
   height:52px;
@@ -23,7 +40,7 @@ header .logo{
 }
 
 #hamburgerBtn{
-  height:25px;
+  height:28px;
   width:32px;
   box-sizing: border-box;
   background:none;
@@ -59,8 +76,4 @@ header .logo{
 
 #hamburgerBtn.clicked span:nth-child(2), #hamburgerBtn.clicked span:nth-child(3){
   transform: rotate(135deg);
-}
-
-nav{
-  float:right;
 }

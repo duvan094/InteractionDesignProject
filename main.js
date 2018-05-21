@@ -2,7 +2,11 @@
 function toggleMenu(){
   document.getElementById("hamburgerBtn").classList.toggle("clicked");
   document.querySelector("nav").classList.toggle("clicked");
+
+  document.getElementById("menu-overlay").classList.toggle("invisible");
+  document.getElementById("menu-overlay").classList.toggle("visible");
 }
+
 
 /*A function for toggling the expandable menu*/
 function toggleList(event){

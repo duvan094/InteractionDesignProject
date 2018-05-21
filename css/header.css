@@ -83,7 +83,7 @@ header .logo{
 }
 
 #hamburgerBtn{
-  height:18px;
+  height:10px;
   width:25px;
   box-sizing: border-box;
   background:none;
@@ -105,10 +105,7 @@ header .logo{
 
 #hamburgerBtn span:nth-child(1){top:0;}
 
-#hamburgerBtn span:nth-child(2){top:50%}
-
-#hamburgerBtn span:nth-child(3){top:100%;}
-
+#hamburgerBtn span:nth-child(2){top:100%}
 
 #hamburgerBtn.clicked span{
   top:50%;
@@ -118,7 +115,7 @@ header .logo{
   transform: rotate(225deg);
 }
 
-#hamburgerBtn.clicked span:nth-child(2), #hamburgerBtn.clicked span:nth-child(3){
+#hamburgerBtn.clicked span:nth-child(2){
   transform: rotate(135deg);
 }
 

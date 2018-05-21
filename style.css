@@ -26,5 +26,31 @@ body{
 main{
   max-width: 960px;
   margin:auto;
-  padding:22px 11px;
+  padding:66px 11px 22px 11px;
+}
+
+.post-grid{
+  display: flex;
+  flex-direction: column;
+}
+
+.post-grid li{
+  width:100%;
+  padding:0 11px;
+  box-sizing: border-box;
+  margin-bottom: 44px;
+}
+
+.post-grid figure{
+  width: 100%;
+  padding-top: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  background: #CCC;
+}
+
+@media (min-width:420px) {
+  .post-grid{
+    flex-direction: row;
+  }
 }

@@ -65,10 +65,16 @@
 
 
     <div class="hero-container">
-      <button onclick="previousSlide()">Previous</button>
-      <button onclick="nextSlide()">Next</button>
+      <button class="slideButton" onclick="previousSlide()">
+        <span></span>
+        <span></span>
+      </button>
+      <button class="slideButton" onclick="nextSlide()">
+        <span></span>
+        <span></span>
+      </button>
       <div class="hero-slider">
-        <figure class="hero" style="background:url('img/doctor.jpg'); background-size:cover; background-position:center;">
+        <figure class="hero" style="background:url('img/doctor.jpg'); background-size:cover; background-position:top center;">
           <div class="text-container">
             <h2>Title 1</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa alias totam cupiditate illo
@@ -77,7 +83,7 @@
             </p>
           </div>
         </figure>
-        <figure class="hero" style="background:url('img/genericDoctor.jpg'); background-size:cover; background-position:center;">
+        <figure class="hero" style="background:url('img/genericDoctor.jpg'); background-size:cover; background-position:top center;">
           <div class="text-container">
             <h2>Title 2</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa alias totam cupiditate illo
@@ -86,7 +92,7 @@
             </p>
           </div>
         </figure>
-        <figure class="hero" style="background:url('img/researching.jpg'); background-size:cover; background-position:center;">
+        <figure class="hero" style="background:url('img/researching.jpg'); background-size:cover; background-position:top center;">
           <div class="text-container">
             <h2>Title 3</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa alias totam cupiditate illo
@@ -99,18 +105,39 @@
 
     </div>
     <main>
-      <ul>
+      <ul class="post-grid">
         <li>
-          <figure>img</figure>
-          <a href="">News from Pharmacutical Inc.</a>
+          <a href="">
+            <figure style="background:url('img/doctor.jpg'); background-size:cover; background-position:cover;"></figure>
+          </a>
+          <a href="">
+            <h3>News from Pharmacutical Inc.</h3>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, cupiditate dolorum culpa quia.
+          </p>
         </li>
         <li>
-          <figure>img</figure>
-          <a href="">Blog</a>
+          <a href="">
+            <figure style="background:url('img/scroungingMeds.jpg'); background-size:cover; background-position:cover;"></figure>
+          </a>
+          <a href="">
+            <h3>Blog</h3>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, cupiditate dolorum culpa quia.
+          </p>
         </li>
         <li>
-          <figure>img</figure>
-          <a href="">Science news</a>
+          <a href="">
+            <figure style="background:url('img/researching.jpg'); background-size:cover; background-position:cover;"></figure>
+          </a>
+          <a href="">
+            <h3>Science news</h3>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, cupiditate dolorum culpa quia.
+          </p>
         </li>
       </ul>
 

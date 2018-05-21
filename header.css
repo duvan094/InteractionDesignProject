@@ -1,3 +1,22 @@
+header{
+  display: flex;
+  width: 100%;
+  height: 66px;
+  padding: 0 11px;
+  box-sizing: border-box;
+  box-shadow: 2px 0 10px 0 rgba(0,0,0,0.5);
+  background: #FFF;
+  z-index: 10;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+}
+
+header nav{
+  position: absolute;
+  display: none;
+}
+
 header .logo{
   height:52px;
   width:auto;
@@ -20,6 +39,7 @@ header .logo{
   height:3px;
   background: #000;
   left:0;
+  transition: 0.2s ease-in-out top, 0.2s ease-in-out transform;
 }
 
 #hamburgerBtn span:nth-child(1){top:0;}
@@ -28,6 +48,18 @@ header .logo{
 
 #hamburgerBtn span:nth-child(3){top:100%;}
 
+
+#hamburgerBtn.clicked span{
+  top:50%;
+}
+
+#hamburgerBtn.clicked span:nth-child(1){
+  transform: rotate(225deg);
+}
+
+#hamburgerBtn.clicked span:nth-child(2), #hamburgerBtn.clicked span:nth-child(3){
+  transform: rotate(135deg);
+}
 
 nav{
   float:right;

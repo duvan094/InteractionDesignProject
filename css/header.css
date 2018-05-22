@@ -14,81 +14,9 @@ header{
   left:0;
 }
 
-nav{
-  position: absolute;
-  display: block;
-  height:calc(100vh - 66px);
-  width:100%;
-  max-width: 320px;
-  top:66px;
-  right:0;
-  background:#FFF;
-  box-sizing: border-box;
-  transform: translateX(100%) translateZ(0);
-  transition: transform 0.2s ease-in-out;
-  box-shadow: 2px 5px 10px 0 rgba(0,0,0,0.2);
-  overflow: auto;
-}
-
-nav p{
-  margin:0;
-}
-
-nav form, nav li ul li a, nav p{
-  padding:11px;
-  box-sizing: border-box;
-  display:block;
-}
-
-nav li ul{
-  height:0;
-  transform: translateZ(0);
-  transition: 0.2s ease-in-out height;
-  overflow:hidden;
-}
-
-nav>ul>li>p::after{
-  content:"";
-  display: block;
-  position: absolute;
-  width:15px;
-  height:15px;
-  right:0;
-  top:50%;
-  transform: translate(0,-50%);
-  margin-right: 11px;
-  background:url("../img/arrow.svg");
-  background-size:100% auto;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-nav>ul>li>p{
-  cursor:pointer;
+nav>ul>li>a{
   position: relative;
 }
-
-nav>ul{
-  border-top:1px solid #CCC;
-}
-
-nav>ul>li{
-  border-bottom:1px solid #CCC;
-}
-
-nav li ul li{
-  background:#f2f2f2;
-}
-
-
-nav li ul li:hover,nav p:hover{
-  background:#e2e2e2;
-}
-
-nav form{
-  width:100%;
-}
-
 
 nav form input{
   width:100%;
@@ -96,52 +24,165 @@ nav form input{
   box-sizing:border-box;
 }
 
-nav.clicked{
-  transform: translateX(0) translateZ(0);
-}
-
-
 header .logo{
   height:32px;
   width:auto;
 }
 
-#hamburgerBtn{
-  height:11px;
-  width:25px;
-  box-sizing: border-box;
-  background:none;
-  border:none;
-  position: relative;
-  cursor: pointer;
+@media (max-width:720px) {
+
+  nav{
+    position: absolute;
+    display: block;
+    height:calc(100vh - 66px);
+    width:100%;
+    max-width: 320px;
+    top:66px;
+    right:0;
+    background:#FFF;
+    box-sizing: border-box;
+    transform: translateX(100%) translateZ(0);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 2px 5px 10px 0 rgba(0,0,0,0.2);
+    overflow: auto;
+  }
+
+  nav a{
+    margin:0;
+  }
+
+  nav form, nav li ul li a, nav a{
+    padding:11px;
+    box-sizing: border-box;
+    display:block;
+  }
+
+  nav li ul{
+    height:0;
+    transform: translateZ(0);
+    transition: 0.2s ease-in-out height;
+    overflow:hidden;
+  }
+
+  nav>ul>li>a::after{
+    content:"";
+    display: block;
+    position: absolute;
+    width:15px;
+    height:15px;
+    right:0;
+    top:50%;
+    transform: translate(0,-50%);
+    margin-right: 11px;
+    background:url("../img/arrow.svg");
+    background-size:100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  nav>ul{
+    border-top:1px solid #CCC;
+  }
+
+  nav>ul>li{
+    border-bottom:1px solid #CCC;
+  }
+
+  nav li ul li{
+    background:#f2f2f2;
+  }
+
+
+  nav li ul li:hover,nav p:hover{
+    background:#e2e2e2;
+  }
+
+  nav form{
+    width:100%;
+  }
+
+  nav.clicked{
+    transform: translateX(0) translateZ(0);
+  }
+
+  #hamburgerBtn{
+    height:11px;
+    width:25px;
+    box-sizing: border-box;
+    background:none;
+    border:none;
+    position: relative;
+    cursor: pointer;
+  }
+
+  #hamburgerBtn span{
+    display: block;
+    position: absolute;
+    border-radius: 3px;
+    width: 100%;
+    height:2px;
+    background: #000;
+    left:0;
+    transition: 0.2s ease-in-out top, 0.2s ease-in-out transform;
+  }
+
+  #hamburgerBtn span:nth-child(1){top:0;}
+
+  #hamburgerBtn span:nth-child(2){top:100%}
+
+  #hamburgerBtn.clicked span{
+    top:50%;
+  }
+
+  #hamburgerBtn.clicked span:nth-child(1){
+    transform: rotate(225deg);
+  }
+
+  #hamburgerBtn.clicked span:nth-child(2){
+    transform: rotate(135deg);
+  }
+
 }
 
-#hamburgerBtn span{
-  display: block;
-  position: absolute;
-  border-radius: 3px;
-  width: 100%;
-  height:2px;
-  background: #000;
-  left:0;
-  transition: 0.2s ease-in-out top, 0.2s ease-in-out transform;
+@media (min-width:720px) {
+  #hamburgerBtn{
+    display: none;
+  }
+
+  nav{
+    display:flex;
+    width:100%;
+    height:100%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  nav > ul {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav > ul > li{
+    height:100%;
+    margin:0 11px;
+  }
+
+  nav > ul > li > a{
+    height:100%;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav > ul > li > ul{
+      display:none;
+  }
+
 }
 
-#hamburgerBtn span:nth-child(1){top:0;}
-
-#hamburgerBtn span:nth-child(2){top:100%}
-
-#hamburgerBtn.clicked span{
-  top:50%;
-}
-
-#hamburgerBtn.clicked span:nth-child(1){
-  transform: rotate(225deg);
-}
-
-#hamburgerBtn.clicked span:nth-child(2){
-  transform: rotate(135deg);
-}
 
 .menu-overlay{
   width:100%;

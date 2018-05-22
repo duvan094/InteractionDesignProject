@@ -10,6 +10,7 @@ function toggleMenu(){
 
 /*A function for toggling the expandable menu*/
 function toggleList(event){
+  event.preventDefault();
   var parent = event.target.parentNode;
   var list = parent.children[parent.children.length-1];
 

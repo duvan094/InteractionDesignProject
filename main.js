@@ -31,6 +31,7 @@ function checkIfDesktop(){
       expandButtons[i].addEventListener("click", toggleList);
       document.getElementById("menu-overlay").addEventListener("click",toggleMenu);
       document.getElementById("menu-overlay").removeEventListener("click",closeExpandMenu);
+      document.querySelector("header").style.height = "";
     }
   }
 }

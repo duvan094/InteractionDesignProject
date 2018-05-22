@@ -1,6 +1,6 @@
 header{
   width: 100%;
-  box-shadow: 2px 0 10px 0 rgba(0,0,0,0.5);
+  box-shadow: 2px 0 10px 0 rgba(0,0,0,0.2);
   background: #FFF;
   position: fixed;
   top:0;
@@ -244,6 +244,7 @@ header .logo{
     height:200px;
     opacity: 0;
     visibility: hidden;
+    transform: translateZ(0);
     animation: menu-invisible 0.2s ease-in-out;
     animation-iteration-count: 1;
   }
@@ -251,14 +252,14 @@ header .logo{
   nav > ul > li.expand > ul{
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateZ(0);
     animation: menu-visible 0.2s ease-in-out;
     animation-iteration-count: 1;
   }
 
   @keyframes menu-invisible {
     0%{
-      transform: translateX(-50%);
+      transform: translateX(-50%) translateZ(0);
       opacity: 1;
       visibility: visible;
     }
@@ -266,7 +267,7 @@ header .logo{
     100%{
       opacity:0;
       visibility: hidden;
-      transform: translateX(-48%);
+      transform: translateX(-48%) translateZ(0);
     }
   }
 
@@ -274,12 +275,12 @@ header .logo{
   @keyframes menu-visible {
     0%{
       opacity: 0;
-      transform: translateX(-48%);
+      transform: translateX(-48%) translateZ(0);
     }
 
     100%{
       opacity:1;
-      transform: translateX(-50%);
+      transform: translateX(-50%) translateZ(0);
     }
   }
 

@@ -28,10 +28,18 @@ nav>ul>li>a{
   position: relative;
 }
 
-nav form input{
+nav>form>input{
   width:100%;
+  margin:0;
   padding:5px 11px;
   box-sizing:border-box;
+  border-radius: 5px;
+  border:1px solid #CCC;
+}
+
+nav form{
+  width: 100%;
+  box-sizing: border-box;
 }
 
 header .logo{
@@ -44,6 +52,9 @@ header .logo{
   flex-direction: column;
   box-sizing: border-box;
   padding:11px;
+  margin-top:44px;
+  height:120px;
+  justify-content: center;
 }
 
 .my-page img{
@@ -53,6 +64,7 @@ header .logo{
 .my-page p{
   margin:0;
   text-align: center;
+  white-space: nowrap;
 }
 
 
@@ -217,7 +229,7 @@ header .logo{
 
   nav > ul > li.expand > ul{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
   }
 
@@ -239,12 +251,23 @@ header .logo{
     padding:11px;
     box-sizing: border-box;
     display: block;
+    width: calc(100%/4);
   }
 
+
+  nav > ul > li > ul > li{
+    text-decoration: underline;
+  }
 
   .my-page{
     height: 100%;
+    margin-top:0;
   }
+
+  nav form{
+    padding: 0 22px;
+  }
+
 }
 
 

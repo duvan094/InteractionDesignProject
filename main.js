@@ -46,8 +46,7 @@ function closeExpandMenu(){
 
 function expandMenu(event){
   event.preventDefault();
-  var parent = event.target.parentNode;
-  var list = parent.children[parent.children.length-1];
+  var element = event.target.parentNode;
 
   var previouslyExpanded = document.querySelectorAll(".expand");
 
@@ -55,13 +54,13 @@ function expandMenu(event){
     previouslyExpanded[0].classList.remove("expand");
     document.getElementById("menu-overlay").classList.add("invisible");
     document.getElementById("menu-overlay").classList.remove("visible");
-    if(previouslyExpanded[0] !== list){
-      list.classList.add("expand");
+    if(previouslyExpanded[0] !== element){
+      element.classList.add("expand");
       document.getElementById("menu-overlay").classList.remove("invisible");
       document.getElementById("menu-overlay").classList.add("visible");
     }
   }else{
-    list.classList.add("expand");
+    element.classList.add("expand");
     document.getElementById("menu-overlay").classList.remove("invisible");
     document.getElementById("menu-overlay").classList.add("visible");
   }

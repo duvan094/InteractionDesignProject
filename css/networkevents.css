@@ -24,6 +24,9 @@
 .eventtitle > p{
   margin: 0;
 }
+.eventtitle::after{
+  content: ">";
+}
 .eventinfo{
   background: #f2f2f2;
   padding: 22px 33px;

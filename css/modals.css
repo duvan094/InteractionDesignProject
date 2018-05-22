@@ -50,7 +50,7 @@ h2 {
   display: block;
   box-sizing: border-box;
 }
-.buttoncancel{
+#buttoncancel{
   position: absolute;
   top:0;
   right: 0;
@@ -60,6 +60,8 @@ h2 {
   font-weight: 600;
   font-size: 1em;
   color: white;
+  cursor: pointer;
+  border: none;
 }
 .attendbutton:hover,
 .button:hover{
@@ -119,6 +121,7 @@ input:focus, #professions:focus{
   padding: 7px 7px;
   color: #6e6e6e;
 }
+
 
 #navbuttons {
   display: flex;

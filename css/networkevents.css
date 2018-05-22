@@ -14,12 +14,16 @@
 .breadcrumbs > li:last-child::after{
   content: " ";
 }
+.text-container{
+  padding:  0 33px;
+}
 .eventtitle{
   background: white;
   padding: 11px 33px;
   margin-top: 11px;
   display: flex;
   justify-content: space-around;
+  border-bottom: solid 2px #3CA3FF;
 }
 .eventtitle > p{
   margin: 0;
@@ -38,5 +42,5 @@
 }
 .eventconfirmation{
   background: #f2f2f2;
-  padding: 22px 33px
+  padding: 22px 33px;
 }

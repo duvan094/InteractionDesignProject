@@ -52,10 +52,11 @@ ul, li {
   font-size: 1em;
   color: white;
 }
+.attendbutton:hover,
 .button:hover{
   background:#57B0FF;
 }
-
+.attendbutton:active,
 .button:active{
   transform:translateY(5%);
 }

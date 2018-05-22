@@ -51,6 +51,21 @@ main{
   background: #CCC;
 }
 
+.inputfield, #professions{
+  display: block;
+  font-size: 1em;
+  line-height: 2em;
+  padding-left: 11px;
+  margin: 6px 0 22px 0;
+  border: 2px solid white;
+  transition: border ease-in-out .2s;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #E0E0E0;
+}
+
+
 @media (min-width:420px) {
   .post-grid{
     flex-direction: row;

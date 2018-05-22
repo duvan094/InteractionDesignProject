@@ -178,8 +178,29 @@ header .logo{
   }
 
   nav > ul > li > ul{
-      display:none;
+    display:none;
+    position:absolute;
+    width: 100%;
+    left: 0;
+    background: #CCC;
+    height:200px;
+    box-shadow:0 10px 10px 0 rgba(0,0,0,0.2);
   }
+
+  nav > ul > li > ul.expand{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  nav > ul > li > ul > li{
+    padding:11px;
+    box-sizing: border-box;
+    width:calc(100%/3);
+    display: block;
+  }
+
 
 }
 
@@ -191,7 +212,7 @@ header .logo{
   top:0;
   left:0;
   position: fixed;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.5);
   opacity: 0;
   visibility: 0;
 }

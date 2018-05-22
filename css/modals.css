@@ -91,13 +91,15 @@ h2 {
   cursor:pointer;
   margin: 11px 22px;
 }
-
+label{
+  padding-left: 11px;
+}
 .inputfield, #professions{
   display: block;
   font-size: 1em;
   line-height: 2em;
   padding-left: 11px;
-  margin: 11px 0;
+  margin: 6px 0 22px 0;
   border: 2px solid white;
   transition: border ease-in-out .2s;
   border-radius: 5px;

@@ -1,9 +1,17 @@
 ul, li {
   list-style: none;
 }
+
+h2 {
+  text-align: center;
+}
+
 .modal-container{
   z-index: 11;
   box-sizing: border-box;
+  visibility: visible;
+  opacity: 1;
+  overflow: auto;
 }
 .modal-wrapper{
   padding: 11px;
@@ -18,6 +26,7 @@ ul, li {
   position: relative;
   box-sizing: border-box;
   border-radius: 5px;
+  background: #ffffff;
 }
 
 .modal #cancelmodal {
@@ -67,14 +76,20 @@ ul, li {
 
 }
 
+#modalheader {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 #modalheader > button{
   border: 0;
   background: none;
   font-weight:600;
   font-size: 1.5em;
   cursor:pointer;
-  margin-top:11px;
-  margin-left:11px;
+  margin: 11px 22px;
 }
 
 .inputfield, #professions{
@@ -83,10 +98,12 @@ ul, li {
   line-height: 2em;
   padding-left: 11px;
   margin: 11px 0;
-  border: 0;
+  border: 2px solid white;
+  transition: border ease-in-out .2s;
   border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
+  background-color: #E0E0E0;
 }
 
 input:focus, #professions:focus{
@@ -105,4 +122,8 @@ input:focus, #professions:focus{
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+label {
+  padding: 2px;
 }

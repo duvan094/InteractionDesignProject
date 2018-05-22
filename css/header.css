@@ -118,6 +118,10 @@ header .logo{
     background-position: center;
   }
 
+  nav>ul>li.expand > a::after{
+  transform:translate(0,-50%) rotate(180deg);
+  }
+
   nav>ul{
     border-top:1px solid #CCC;
   }
@@ -129,7 +133,6 @@ header .logo{
   nav li ul li{
     background:#f2f2f2;
   }
-
 
   nav li ul li:hover,nav a:hover{
     background:#e2e2e2;
@@ -236,14 +239,20 @@ header .logo{
     color:#579ad4;
   }
 
-  nav > ul > li.expand > a::after{
+  nav > ul > li > a::after{
     content:"";
     background: #579ad4;;
-    width:100%;
+    width:0;
     height:3px;
     position: absolute;
     bottom:0;
-    left:0;
+    left:50%;
+    transition: width 0.2s ease-in-out,left 0.2s ease-in-out;
+  }
+
+  nav > ul > li.expand > a::after{
+    width:100%;
+    left:0%;
   }
 
   nav > ul > li > ul > li{
@@ -283,7 +292,7 @@ header .logo{
   top:0;
   left:0;
   position: fixed;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.2);
   opacity: 0;
   visibility: 0;
 }
@@ -292,14 +301,14 @@ header .logo{
 .menu-overlay.visible{
   visibility: visible;
   opacity:1;
-  animation: overlay-visible 0.3s ease-in-out;
+  animation: overlay-visible 0.2s ease-in-out;
   animation-iteration-count: 1;
 }
 
 .menu-overlay.invisible{
   opacity: 0;
   visibility: hidden;
-  animation: overlay-invisible 0.3s ease-in-out;
+  animation: overlay-invisible 0.2s ease-in-out;
   animation-iteration-count: 1;
 }
 

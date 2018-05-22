@@ -23,6 +23,7 @@ ul, li {
 .modal #cancelmodal {
 	position: absolute;
 }
+.attendbutton,
 .button{
   padding:1em 2em;
   margin: 11px 0;

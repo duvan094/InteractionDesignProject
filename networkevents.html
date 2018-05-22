@@ -10,11 +10,18 @@
 </head>
   <body>
     <header>
-      <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+      <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+      <button id="hamburgerBtn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+      </button>
       <nav>
+        <form action="">
+          <input type="text" placeholder="Search">
+        </form>
         <ul>
           <li>
-            Education
+            <p onclick="toggleList(event)">Education</p>
             <ul>
               <li><a href="">Med Eds</a></li>
               <li><a href="">eLearning</a></li>
@@ -25,7 +32,7 @@
             </ul>
           </li>
           <li>
-            Therapy
+            <p onclick="toggleList(event)">Therapy</p>
             <ul>
               <li><a href="">Oncology</a></li>
               <li><a href="">Diabetes</a></li>
@@ -34,7 +41,7 @@
             </ul>
           </li>
           <li>
-            Products
+            <p onclick="toggleList(event)">Products</p>
             <ul>
               <li><a href="">Oncology</a></li>
               <li><a href="">Diabetes</a></li>
@@ -44,7 +51,7 @@
             </ul>
           </li>
           <li>
-            Order
+            <p onclick="toggleList(event)">Order</p>
             <ul>
               <li><a href="">Order material</a></li>
               <li><a href="">How to order</a></li>
@@ -53,6 +60,8 @@
         </ul>
       </nav>
     </header>
+    <section class="menu-overlay invisible" id="menu-overlay" onclick="toggleMenu()">
+    </section>
     <ul>
       <li>
         <a class="breadcrumbs" href="index.html">HOME</a>
@@ -82,7 +91,7 @@
         <div class="eventconfirmation">
           <h3>You will attend this event!</h3>
           <p>A confirmation e-mail will be sent to you</p>
-          <button type="button" name="close" class="attendbutton">Close</button>
+          <button type="button" name="close" class="attendbutton ">Close</button>
         </div>
       </li>
       <li>
@@ -163,38 +172,33 @@
       </li>
     </ul>
 
-
-
-
-
-
-
-
-
     <footer>
-      <ul>
-        Contact
-        <li><a href="">Contact us</a></li>
-        <li><a href="">Customer service</a></li>
-        <li><a href="">FAQ</a></li>
-      </ul>
-      <ul>
-        About
-        <li><a href="">About Pharmacutical Inc.</a></li>
-        <li><a href="">Sustainability</a></li>
-        <li><a href="">Collaboration</a></li>
-        <li><a href="">Press material</a></li>
-        <li><a href="">Board and management</a></li>
-      </ul>
-      <ul>
-        Newsletter
-        <li><a href="">Sign up</a></li>
-        <li><a href="">About newsletter</a></li>
-        <li><a href="">Tip a friend</a></li>
-      </ul>
-      <a href=""><img src="img/logo.png" alt="logo"></a>
+      <div class="footer-wrapper">
+        <ul>
+          <h4>Contact</h4>
+          <li><a href="">Contact us</a></li>
+          <li><a href="">Customer service</a></li>
+          <li><a href="">FAQ</a></li>
+        </ul>
+        <ul>
+          <h4>About</h4>
+          <li><a href="">About Pharmacutical Inc.</a></li>
+          <li><a href="">Sustainability</a></li>
+          <li><a href="">Collaboration</a></li>
+          <li><a href="">Press material</a></li>
+          <li><a href="">Board and management</a></li>
+        </ul>
+        <ul>
+          <h4>Newsletter</h4>
+          <li><a href="">Sign up</a></li>
+          <li><a href="">About newsletter</a></li>
+          <li><a href="">Tip a friend</a></li>
+        </ul>
+      </div>
+      <a href=""><img class="logo" src="img/logo.png" alt="logo"></a>
     </footer>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
 
-  </body>
+    </body>
 </html>

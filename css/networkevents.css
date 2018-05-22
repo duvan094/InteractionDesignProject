@@ -1,10 +1,23 @@
 .breadcrumbs{
+  margin: 77px 0 11px 11px;
+}
+.breadcrumbs > li{
   display: inline-block;
-  font-size: .5em;
+}
+.breadcrumbs > li > a{
+  color: black;
+  text-decoration: underline;
+}
+.breadcrumbs > li::after{
+  content: ">";
+}
+.breadcrumbs > li:last-child::after{
+  content: " ";
 }
 .eventtitle{
   background: white;
   padding: 11px 33px;
+  margin-top: 11px;
   display: flex;
   justify-content: space-around;
 }

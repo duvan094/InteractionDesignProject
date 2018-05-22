@@ -1,0 +1,26 @@
+.breadcrumbs{
+  display: inline-block;
+  font-size: .5em;
+}
+.eventtitle{
+  background: white;
+  padding: 11px 33px;
+  display: flex;
+  justify-content: space-around;
+}
+.eventtitle > p{
+  margin: 0;
+}
+.eventinfo{
+  background: #f2f2f2;
+  padding: 22px 33px;
+}
+.eventinfo > p{
+}
+.eventinfo > h3{
+  margin: 0;
+}
+.eventconfirmation{
+  background: #f2f2f2;
+  padding: 22px 33px
+}

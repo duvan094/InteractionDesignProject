@@ -261,6 +261,12 @@ header .logo{
   .my-page{
     height: 100%;
     margin-top:0;
+    flex-direction: row-reverse;
+    align-items:center;
+  }
+
+  .my-page p{
+    padding-right:11px;
   }
 
   nav form{

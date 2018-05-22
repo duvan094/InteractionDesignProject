@@ -20,12 +20,10 @@ function toggleList(event){
     previouslyExpanded[0].style.height = 0 + "px";
     if(previouslyExpanded[0] !== list){
       list.classList.add("expand");
-      list.style.height = list.children.length * parent.offsetHeight + "px";
+      list.style.height = list.children.length * parent.children[0].offsetHeight + "px";
     }
   }else{
     list.classList.add("expand");
-    list.style.height = list.children.length * parent.offsetHeight + "px";
+    list.style.height = list.children.length * parent.children[0].offsetHeight + "px";
   }
-
-
 }

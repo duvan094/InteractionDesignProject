@@ -47,9 +47,33 @@ nav li ul{
   overflow:hidden;
 }
 
+nav>ul>li>p::after{
+  content:"";
+  display: block;
+  position: absolute;
+  width:15px;
+  height:15px;
+  right:0;
+  top:50%;
+  transform: translate(0,-50%);
+  margin-right: 11px;
+  background:url("../img/arrow.svg");
+  background-size:100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-nav p{
+nav>ul>li>p{
   cursor:pointer;
+  position: relative;
+}
+
+nav>ul{
+  border-top:1px solid #CCC;
+}
+
+nav>ul>li{
+  border-bottom:1px solid #CCC;
 }
 
 nav li ul li{

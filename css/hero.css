@@ -21,6 +21,13 @@
   z-index: 2;
   border:none;
   background: none;
+  opacity:0.6;
+  transition: 0.2s ease-in-out opacity;
+}
+
+
+.hero-container:hover > button{
+  opacity:1;
 }
 
 .slideButton{
@@ -33,6 +40,12 @@
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 3;
+  opacity:0.6;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.hero-container:hover .slider-progress{
+  opacity:1;
 }
 
 .slider-progress button{
@@ -108,7 +121,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: 0.3s ease-in-out transform;
+  transition: 0.4s ease-in-out transform;
 }
 
 

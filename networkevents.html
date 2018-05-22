@@ -17,22 +17,22 @@
       </button>
       <nav>
         <form action="">
-          <input type="text" placeholder="Search">
+          <input class="inputfield" type="text" placeholder="Search">
         </form>
         <ul>
           <li>
-            <p onclick="toggleList(event)">Education</p>
+            <a href="" class="expandButton">Education</a>
             <ul>
               <li><a href="">Med Eds</a></li>
               <li><a href="">eLearning</a></li>
               <li><a href="">EdsVideos</a></li>
               <li><a href="">EdsSlides</a></li>
-              <li><a href="">Network Events</a></li>
+              <li><a href="networkevents.html">Network Events</a></li>
               <li><a href="">Eds Forum</a></li>
             </ul>
           </li>
           <li>
-            <p onclick="toggleList(event)">Therapy</p>
+            <a href="" class="expandButton">Therapy</a>
             <ul>
               <li><a href="">Oncology</a></li>
               <li><a href="">Diabetes</a></li>
@@ -41,7 +41,7 @@
             </ul>
           </li>
           <li>
-            <p onclick="toggleList(event)">Products</p>
+            <a href="" class="expandButton">Products</a>
             <ul>
               <li><a href="">Oncology</a></li>
               <li><a href="">Diabetes</a></li>
@@ -51,17 +51,22 @@
             </ul>
           </li>
           <li>
-            <p onclick="toggleList(event)">Order</p>
+            <a href="" class="expandButton">Order</a>
             <ul>
               <li><a href="">Order material</a></li>
               <li><a href="">How to order</a></li>
             </ul>
           </li>
         </ul>
+        <a href="" class="my-page">
+          <img src="img/profile-img.svg" alt="profile-img">
+          <p>My page</p>
+        </a>
       </nav>
     </header>
-    <section class="menu-overlay invisible" id="menu-overlay" onclick="toggleMenu()">
+    <section class="menu-overlay invisible" id="menu-overlay">
     </section>
+
     <ul class="breadcrumbs">
       <li>
         <a  href="index.html">HOME</a>

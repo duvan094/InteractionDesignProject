@@ -29,6 +29,23 @@ header .logo{
   width:auto;
 }
 
+.my-page{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding:11px;
+}
+
+.my-page img{
+  height:60%;
+}
+
+.my-page p{
+  margin:0;
+  text-align: center;
+}
+
+
 @media (max-width:720px) {
 
   nav{
@@ -93,7 +110,7 @@ header .logo{
   }
 
 
-  nav li ul li:hover,nav p:hover{
+  nav li ul li:hover,nav a:hover{
     background:#e2e2e2;
   }
 
@@ -211,11 +228,13 @@ header .logo{
   nav > ul > li > ul > li{
     padding:11px;
     box-sizing: border-box;
-    width:calc(100%/3);
     display: block;
   }
 
 
+  .my-page{
+    height: 100%;
+  }
 }
 
 

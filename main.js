@@ -42,6 +42,7 @@ function closeExpandMenu(){
   document.querySelectorAll(".expand")[0].classList.remove("expand");
   document.getElementById("menu-overlay").classList.add("invisible");
   document.getElementById("menu-overlay").classList.remove("visible");
+  document.querySelector("header").style.height = "";
 }
 
 function expandMenu(event){
@@ -54,12 +55,15 @@ function expandMenu(event){
     previouslyExpanded[0].classList.remove("expand");
     document.getElementById("menu-overlay").classList.add("invisible");
     document.getElementById("menu-overlay").classList.remove("visible");
+    document.querySelector("header").style.height = "";
     if(previouslyExpanded[0] !== element){
       element.classList.add("expand");
       document.getElementById("menu-overlay").classList.remove("invisible");
       document.getElementById("menu-overlay").classList.add("visible");
+      document.querySelector("header").style.height = 266 + "px";
     }
   }else{
+    document.querySelector("header").style.height = 266 + "px";
     element.classList.add("expand");
     document.getElementById("menu-overlay").classList.remove("invisible");
     document.getElementById("menu-overlay").classList.add("visible");

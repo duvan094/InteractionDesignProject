@@ -21,11 +21,14 @@ footer a{
   text-decoration: none;
   color:#FFF;
   opacity:0.8;
+  font-weight: 300;
   transition: 0.2s ease-in-out opacity;
+  line-height: 2em;
 }
 
 footer a:hover{
   opacity:1;
+  text-decoration: underline;
 }
 
 footer ul{
@@ -35,7 +38,8 @@ footer ul{
 footer ul h4{
   font-size: 1.2em;
   opacity:0.8;
-  margin-bottom: 0;
+  margin:0;
+  font-weight: 400;
 }
 
 
@@ -56,6 +60,17 @@ footer .logo{
     justify-content: space-between;
     padding: 0 22px;
     box-sizing:border-box;
+    align-items: flex-start;
+  }
+
+  footer ul{
+    border-left: 1px solid rgba(255,255,255,0.6);
+    padding-left: 11px;
+  }
+
+  footer ul:first-child{
+    border-left:none;
+    padding-left:0;
   }
 
 }

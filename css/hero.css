@@ -130,6 +130,7 @@
   transform:translateX(0%) translateZ(0);
 }
 
+
 .hero.next .text-container,.hero.previous .text-container{
   transform:translateX(200px);
   opacity:0;
@@ -145,9 +146,23 @@
   transform:translateX(100%) translateZ(0);
 }
 
+@media (min-width:1280px) {
+
+  .hero.current .text-container{
+    transform:translateX(-50%);
+    opacity:1;
+  }
+
+
+}
+
+
+
 .hero .text-container{
   max-width: 420px;
-  padding:22px;
+  padding:44px;
+  margin:11px;
+  background: rgba(255,255,255,0.8);
 }
 
 .hero .text-container h2{
@@ -170,5 +185,6 @@
   font-weight:300;
   font-size:1.2em;
   padding:0.5em 1em;
+  margin-bottom:0;
   text-transform: capitalize;
 }

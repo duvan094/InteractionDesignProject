@@ -73,6 +73,14 @@ header .logo{
   white-space: nowrap;
 }
 
+header > .header-wrapper > nav > form > #search{
+  background-image: url('../img/search.svg');
+  background-position: 11px center;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  padding-left: 41px;
+}
+
 
 @media (max-width:720px) {
 

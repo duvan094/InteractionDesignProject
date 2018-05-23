@@ -10,8 +10,7 @@
 
 .modal-wrapper{
   padding: 11px;
-  /*box-sizing: border-box;*/
-  max-width: 420px;
+  box-sizing: border-box;
   width: 100%;
   position: absolute;
   left: 50%;
@@ -27,6 +26,8 @@
   overflow: hidden;
   transform:scale(1,1);
   transition: 0.2s ease-in-out transform;
+  max-width: 420px;
+  margin: auto;
 }
 
 .modal h2{

@@ -85,7 +85,7 @@ function updateProgressBar(index){
 }
 
 
-document.getElementById("modal").children[0].addEventListener("click",function(event){
+document.getElementById("modal").children[0].children[0].addEventListener("click",function(event){
   event.stopPropagation();
 });
 

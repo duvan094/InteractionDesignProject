@@ -18,6 +18,7 @@
   padding:  0 33px;
 }
 .eventtitle{
+  cursor: pointer;
   background: white;
   padding: 11px 33px;
   margin-top: 11px;
@@ -40,4 +41,15 @@
 }
 .eventinfo > h3{
   margin: 0;
+}
+
+
+.eventSlider{
+  max-height:0;
+  overflow:hidden;
+  transition: 0.2s ease-in-out;
+}
+
+.eventSlider.clicked{
+  max-height:300px;
 }

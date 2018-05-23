@@ -23,15 +23,41 @@
   padding: 11px 33px;
   margin-top: 11px;
   display: flex;
-  justify-content: space-around;
   border-bottom: solid 2px #3CA3FF;
+  position: relative;
 }
+
+.eventtitle p:first-child{
+  width:20%;
+}
+
+.eventtitle:hover{
+  background:#CCC;
+}
+
 .eventtitle > p{
   margin: 0;
 }
 .eventtitle::after{
-  content: ">";
+  content:"";
+  display: block;
+  position: absolute;
+  width:15px;
+  height:15px;
+  right:0;
+  top:50%;
+  transform: translate(0,-50%);
+  margin-right: 22px;
+  background:url("../img/arrow.svg");
+  background-size:100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+.eventtitle.clicked::after{
+  transform:translate(0,-50%) rotate(180deg);
+}
+
 .eventconfirmation,
 .eventinfo{
   background: #f2f2f2;

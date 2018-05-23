@@ -15,10 +15,13 @@ h2 {
 }
 .modal-wrapper{
   padding: 11px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   max-width: 420px;
   width: 100%;
   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
 .modal{
   box-shadow: 0 2px 10px 0 rgba(0,0,0,.8);
@@ -126,10 +129,21 @@ input:focus, #professions:focus{
   width: 420px;
 }
 
-#modal ul {
-  width: 2100px;
+.card-padding{
+  padding:11px;
+  box-sizing: border-box;
 }
 
-.cardcontainer{
-  width: 1680px;
+.modal-slider{
+  overflow:hidden;
+  transform:translate(0,0);
+  transition: transform 0.2s ease-in-out;
+}
+
+#outerSlider, #logInSignUpCont{
+  width:840px;
+}
+
+#signUpCont{
+  width: 1260px;
 }

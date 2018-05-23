@@ -72,6 +72,7 @@ function nextScreen(container,index){
 };
 
 
+
 function updateProgressBar(index){
   if(index < previousCard){
     for(var i = index; i <= previousCard; i++){//Clear all progress containers that are above current card.

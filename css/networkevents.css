@@ -59,6 +59,7 @@ article{
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
+  pointer-events: none;
   text-overflow: ellipsis;
 }
 

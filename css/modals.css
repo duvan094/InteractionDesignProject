@@ -107,7 +107,9 @@ h2 {
   font-weight:600;
   font-size: 1.5em;
   cursor:pointer;
-  margin: 11px 22px;
+  padding:0 0 11px 0;
+  margin: 11px 22px 0 11px;
+  position: relative;
 }
 label{
   padding-left: 12px;
@@ -156,4 +158,43 @@ input:focus, #professions:focus{
 
 #signUpCont{
   width: 1260px;
+}
+
+
+
+
+
+#modalheader > button::after{
+  content:"";
+  width:0%;
+  transition:width 0.2s ease-in-out, left 0.2s ease-in-out, right 0.2s ease-in-out;
+  height:3px;
+  background:#000;
+  position:absolute;
+  bottom:5px;
+}
+
+#modalheader > button.selected::after{
+  width:100%;
+}
+
+
+#sign-up::after{
+  left:-44px;
+  bottom:5px;
+}
+
+#sign-in::after{
+  right:-44px;
+  bottom:5px;
+}
+
+#sign-up.selected::after{
+  left:0;
+  bottom:5px;
+}
+
+#sign-in.selected::after{
+  right:0;
+  bottom:5px;
 }

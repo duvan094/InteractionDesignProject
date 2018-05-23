@@ -81,7 +81,7 @@ h2 {
 }
 .buttonhalf{
   width: 45%;
-
+  float:right;
   box-sizing: border-box;
 
 }

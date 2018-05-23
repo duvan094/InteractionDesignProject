@@ -6,9 +6,16 @@ var signForm = document.getElementById("signForm");
 var cardContainer = document.getElementById("cardContainer");
 
 
-function closeModal(){
-  modal.classList.remove("display");
 
+
+function openModal(){
+  document.getElementById("modal").classList.add("visible");
+  document.getElementById("modal").classList.remove("invisible");
+};
+
+function closeModal(){
+  document.getElementById("modal").classList.remove("visible");
+  document.getElementById("modal").classList.add("invisible");
 };
 
 function validateForm(event){
@@ -46,3 +53,7 @@ function nextScreen(container,index){
   var length = outerSlider.children.length;
   outerSlider.style.transform = "translate(" + (index/length)*-100 + "%, 0)";
 };
+
+document.getElementById("modal").children[0].addEventListener("click",function(event){
+  event.stopPropagation();
+});

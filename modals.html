@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<input type="submit" name="" value="SIGN UP">
+<input type="submit" name="" value="SIGN UP" onclick="openModal()">
 
-<div class="modal-container menu-overlay">
+<div class="modal-container menu-overlay" id="modal" onclick="closeModal()">
   <div class="modal-wrapper">
     <div class="modal display" id="modal">
         <button id="buttoncancel" onclick="closeModal()">X</button>
@@ -75,7 +75,7 @@
                         </div>
                         <div class="showinput">
                           <label for="">SV-number
-                            <input type="number" class="inputfield" name="svn" value="" placeholder="SVN">
+                            <input type="text" pattern="\d*" class="inputfield" name="svn" value="" placeholder="SVN">
                           </label>
                         </div>
                         <input class="button buttonhalf" type="submit" name="nextbutton" value="Next" onclick="validateForm(event)">
@@ -102,7 +102,7 @@
                       <h2>Thank you!</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                       <figure>img</figure>
-                      <button class="button buttonhalf" type="button" name="nextbutton">Close</button>
+                      <button class="button buttonhalf" type="button" onclick="closeModal()">Close</button>
                     </li>
                   </ul>
                 </li>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url("css/typography.css");
 @import url("css/header.css");
 @import url("css/hero.css");
 @import url("css/footer.css");
@@ -17,6 +18,10 @@ a{
 ul{
   margin:0;
   padding:0;
+}
+
+ul, li {
+  list-style: none;
 }
 
 body{
@@ -42,6 +47,11 @@ main{
   box-sizing: border-box;
   margin-bottom: 44px;
 }
+
+.post-grid li:hover a{
+  color:#579ad4;
+}
+
 
 .post-grid figure{
   width: 100%;

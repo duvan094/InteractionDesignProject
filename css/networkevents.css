@@ -1,43 +1,69 @@
 .breadcrumbs{
-  margin: 22px 0 11px 11px;
+  margin: 22px 0 11px 0px;
 }
 .breadcrumbs > li{
   display: inline-block;
 }
 .breadcrumbs > li > a{
-  color: black;
-  text-decoration: underline;
+  font-weight: 500;
 }
+
+.breadcrumbs > li:last-child > a{
+  color:rgba(0,0,0,0.5);
+}
+
+.breadcrumbs > li > a:hover{
+  color: #579ad4;
+}
+
 .breadcrumbs > li::after{
   content: ">";
 }
 .breadcrumbs > li:last-child::after{
   content: " ";
 }
-.text-container{
-  padding:  0 33px;
+
+article{
+  margin-top: 44px;
+  margin-bottom: 44px;
 }
+
+.eventList > li{
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+}
+
 .eventtitle{
   cursor: pointer;
   background: white;
-  padding: 11px 33px;
+  padding: 11px 22px;
   margin-top: 11px;
   display: flex;
   border-bottom: solid 2px #3CA3FF;
   position: relative;
+  transition: 0.2s ease-in-out background;
 }
 
-.eventtitle p:first-child{
-  width:20%;
-}
 
 .eventtitle:hover{
   background:#CCC;
 }
 
 .eventtitle > p{
+  width: 100%;
   margin: 0;
+  padding:0 11px 0 0;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+
+.eventtitle p:first-child{
+  width:auto;
+  min-width:6em;
+}
+
 .eventtitle::after{
   content:"";
   display: block;
@@ -60,9 +86,10 @@
 
 .eventconfirmation,
 .eventinfo{
-  background: #f2f2f2;
-  padding: 22px 33px;
+  background: #ffffff;
+  padding: 22px 22px;
 }
+
 .eventinfo > p{
 }
 .eventinfo > h3{

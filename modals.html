@@ -25,8 +25,8 @@
 
             <li class="card">
               <div id="modalheader">
-                <button  type="button" name="signinform" onclick="nextScreen('logInSignUpCont',0)">Sign in</button>
-                <button  type="button" name="signupform" onclick="nextScreen('logInSignUpCont',1)">Sign up</button>
+                <button  id="sign-in" type="button" class="selected" name="signinform" onclick="toggleSignIn()">Sign in</button>
+                <button  id="sign-up" type="button" name="signupform" onclick="toggleSignUp()">Sign up</button>
               </div>
 
               <ul id="logInSignUpCont" class="modal-slider">

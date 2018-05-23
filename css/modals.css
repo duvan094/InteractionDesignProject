@@ -13,6 +13,8 @@ h2 {
   opacity: 1;
   overflow: auto;
 }
+
+
 .modal-wrapper{
   padding: 11px;
   /*box-sizing: border-box;*/
@@ -29,12 +31,19 @@ h2 {
   box-sizing: border-box;
   border-radius: 5px;
   background: #ffffff;
-  display: none;
   overflow: hidden;
+  transform:scale(1,1);
+  transition: 0.2s ease-in-out transform;
 }
-.modal.display{
-  display: block;
+
+.modal-container.invisible .modal{
+  transform:scale(0.5,0.5);
 }
+
+.modal-container.visible .modal{
+  transform:scale(1,1);
+}
+
 
 .modal #cancelmodal {
 	position: absolute;
@@ -98,7 +107,9 @@ h2 {
   font-weight:600;
   font-size: 1.5em;
   cursor:pointer;
-  margin: 11px 22px;
+  padding:0 0 11px 0;
+  margin: 11px 22px 0 11px;
+  position: relative;
 }
 label{
   padding-left: 12px;
@@ -181,3 +192,41 @@ input:focus, #professions:focus{
 #finland.invisible #svn{
   transform:translate(0,0);
   opacity:1;
+}
+
+
+
+#modalheader > button::after{
+  content:"";
+  width:0%;
+  transition:width 0.2s ease-in-out, left 0.2s ease-in-out, right 0.2s ease-in-out;
+  height:3px;
+  background:#000;
+  position:absolute;
+  bottom:5px;
+}
+
+#modalheader > button.selected::after{
+  width:100%;
+}
+
+
+#sign-up::after{
+  left:-44px;
+  bottom:5px;
+}
+
+#sign-in::after{
+  right:-44px;
+  bottom:5px;
+}
+
+#sign-up.selected::after{
+  left:0;
+  bottom:5px;
+}
+
+#sign-in.selected::after{
+  right:0;
+  bottom:5px;
+}

@@ -6,7 +6,17 @@ var signForm = document.getElementById("signForm");
 var cardContainer = document.getElementById("cardContainer");
 
 
+function toggleSignIn(){
+  document.getElementById("sign-in").classList.add("selected");
+  document.getElementById("sign-up").classList.remove("selected");
+  nextScreen('logInSignUpCont',0);
+}
 
+function toggleSignUp(){
+  document.getElementById("sign-up").classList.add("selected");
+  document.getElementById("sign-in").classList.remove("selected");
+  nextScreen('logInSignUpCont',1);
+}
 
 function openModal(){
   document.getElementById("modal").classList.add("visible");

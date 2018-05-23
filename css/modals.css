@@ -29,6 +29,10 @@
   transition: 0.2s ease-in-out transform;
 }
 
+.modal h2{
+  text-align: center;
+}
+
 .modal-container.invisible .modal{
   transform:scale(0.5,0.5);
 }

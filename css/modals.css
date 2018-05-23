@@ -108,7 +108,11 @@
   margin: 11px 22px 0 11px;
   position: relative;
 }
-label{
+label p{
+  display: block;
+  font-weight: 400;
+  margin:0;
+  padding:0;
   padding-left: 12px;
 }
 
@@ -162,7 +166,7 @@ input:focus, #professions:focus{
 #finland,#svn{
   overflow:hidden;
   position:relative;
-  max-height: 200px;
+  max-height: 150px;
   transition: 0.2s ease-in-out max-height;
 }
 

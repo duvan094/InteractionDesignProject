@@ -199,6 +199,10 @@ header .logo{
     overflow:hidden;
   }
 
+  header .header-wrapper{
+    position: relative;
+  }
+
   #hamburgerBtn{
     display: none;
   }
@@ -236,11 +240,11 @@ header .logo{
   nav > ul > li > ul{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     position:absolute;
     width: 100%;
-    max-width: 1280px;
-    left: 50%;
+    max-width: 960px;
+    left: 0;
     height:200px;
     opacity: 0;
     visibility: hidden;
@@ -252,14 +256,14 @@ header .logo{
   nav > ul > li.expand > ul{
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateZ(0);
+    transform: translateX(0) translateZ(0);
     animation: menu-visible 0.2s ease-in-out;
     animation-iteration-count: 1;
   }
 
   @keyframes menu-invisible {
     0%{
-      transform: translateX(-50%) translateZ(0);
+      transform: translateX(0) translateZ(0);
       opacity: 1;
       visibility: visible;
     }
@@ -267,7 +271,7 @@ header .logo{
     100%{
       opacity:0;
       visibility: hidden;
-      transform: translateX(-48%) translateZ(0);
+      transform: translateX(20px) translateZ(0);
     }
   }
 
@@ -275,12 +279,12 @@ header .logo{
   @keyframes menu-visible {
     0%{
       opacity: 0;
-      transform: translateX(-48%) translateZ(0);
+      transform: translateX(20px) translateZ(0);
     }
 
     100%{
       opacity:1;
-      transform: translateX(-50%) translateZ(0);
+      transform: translateX(0) translateZ(0);
     }
   }
 
@@ -310,13 +314,16 @@ header .logo{
   nav > ul > li > ul > li{
     padding:11px;
     box-sizing: border-box;
-    display: block;
     width: calc(100%/4);
+    height: 50%;
+    display: flex;
+    align-items: center;
   }
 
 
-  nav > ul > li > ul > li{
-    text-decoration: underline;
+  nav > ul > li > ul > li > a{
+    font-size: 1.2em;
+    font-weight: 500;
   }
 
   .my-page{

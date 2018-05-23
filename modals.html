@@ -54,9 +54,9 @@
                           <input type="text" class="inputfield" name="lastname" value="" placeholder="Last name">
                         </label>
                         <label for="">Profession
-                          <select id="professions" name="professions">
+                          <select id="professions" name="professions" onchange="selectChange()">
                             <option value="" disabled selected hidden>Profession</option>
-                            <option value="">Doctor</option>
+                            <option value="Doctor">Doctor</option>
                             <option value="">Nurse</option>
                             <option value="">Medic</option>
                             <option value="">Surgeon</option>
@@ -65,17 +65,15 @@
                         <label for="">Speciality
                           <input type="text" class="inputfield" name="speciality" value="" placeholder="Speciality">
                         </label>
-                        <div class="hideinput">
+                        <div id="finland"  class="hidelabels">
                           <label for="">Workplace
                             <input type="text" class="inputfield" name="workplace" value="" placeholder="Workplace">
                           </label>
-                          <label for="">City
+                          <label for="" class="hidelabels">City
                             <input type="text" class="inputfield" name="city" value="" placeholder="City">
                           </label>
-                        </div>
-                        <div class="showinput">
-                          <label for="">SV-number
-                            <input type="text" pattern="\d*" class="inputfield" name="svn" value="" placeholder="SVN">
+                          <label for="" class="hidelabels">SV-number
+                            <input type="text" pattern="\d*" class="inputfield" id="svn" name="svn" value="" placeholder="SVN">
                           </label>
                         </div>
                         <input class="button buttonhalf" type="submit" name="nextbutton" value="Next" onclick="validateForm(event)">

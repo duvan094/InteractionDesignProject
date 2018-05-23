@@ -57,3 +57,16 @@ function nextScreen(container,index){
 document.getElementById("modal").children[0].addEventListener("click",function(event){
   event.stopPropagation();
 });
+
+
+
+
+
+function selectChange(){
+  var selectMenu = document.getElementById( "professions" );
+  if(selectMenu.value == "Doctor"){
+    document.getElementById("finland").classList.add("invisible");
+  }else{
+    document.getElementById("finland").classList.remove("invisible");
+  }
+};

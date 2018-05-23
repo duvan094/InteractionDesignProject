@@ -148,3 +148,36 @@ input:focus, #professions:focus{
 #signUpCont{
   width: 1260px;
 }
+
+
+#finland{
+  overflow:hidden;
+  position:relative;
+}
+
+#finland.invisible{
+}
+
+
+
+#finland input{
+  transition:transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transform:translate(0,0);
+  opacity:1;
+}
+
+#finland #svn{
+  position:absolute;
+  top:0;
+  opacity:0;
+  transform:translate(0,-100%);
+}
+
+#finland.invisible input{
+  transform:translate(0,-200%);
+  opacity:0;
+}
+
+#finland.invisible #svn{
+  transform:translate(0,0);
+  opacity:1;

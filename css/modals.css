@@ -13,6 +13,8 @@ h2 {
   opacity: 1;
   overflow: auto;
 }
+
+
 .modal-wrapper{
   padding: 11px;
   /*box-sizing: border-box;*/
@@ -29,12 +31,19 @@ h2 {
   box-sizing: border-box;
   border-radius: 5px;
   background: #ffffff;
-  display: none;
   overflow: hidden;
+  transform:scale(1,1);
+  transition: 0.2s ease-in-out transform;
 }
-.modal.display{
-  display: block;
+
+.modal-container.invisible .modal{
+  transform:scale(0.5,0.5);
 }
+
+.modal-container.visible .modal{
+  transform:scale(1,1);
+}
+
 
 .modal #cancelmodal {
 	position: absolute;

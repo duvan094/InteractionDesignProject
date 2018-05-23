@@ -31,6 +31,7 @@
 .eventtitle::after{
   content: ">";
 }
+.eventconfirmation,
 .eventinfo{
   background: #f2f2f2;
   padding: 22px 33px;
@@ -39,8 +40,4 @@
 }
 .eventinfo > h3{
   margin: 0;
-}
-.eventconfirmation{
-  background: #f2f2f2;
-  padding: 22px 33px;
 }

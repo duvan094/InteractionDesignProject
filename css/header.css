@@ -48,7 +48,8 @@ nav form{
 }
 
 header .logo{
-  height:32px;
+  max-height:32px;
+  max-width: 200px;
   width:auto;
 }
 

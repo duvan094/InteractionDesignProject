@@ -168,13 +168,10 @@ input:focus, #professions:focus{
   transition: 0.2s ease-in-out max-height;
 }
 
-#finland.invisible{
+#finland.invisible, #svn.invisible{
   max-height:0;
 }
 
-#svn.invisible{
-  max-height: 0;
-}
 
 
 #modalheader > button::after{

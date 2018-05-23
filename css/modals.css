@@ -161,39 +161,20 @@ input:focus, #professions:focus{
 }
 
 
-#finland{
+#finland,#svn{
   overflow:hidden;
   position:relative;
+  max-height: 200px;
+  transition: 0.2s ease-in-out max-height;
 }
 
 #finland.invisible{
+  max-height:0;
 }
 
-
-
-#finland input{
-  transition:transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  transform:translate(0,0);
-  opacity:1;
+#svn.invisible{
+  max-height: 0;
 }
-
-#finland #svn{
-  position:absolute;
-  top:0;
-  opacity:0;
-  transform:translate(0,-100%);
-}
-
-#finland.invisible input{
-  transform:translate(0,-200%);
-  opacity:0;
-}
-
-#finland.invisible #svn{
-  transform:translate(0,0);
-  opacity:1;
-}
-
 
 
 #modalheader > button::after{

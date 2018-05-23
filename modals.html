@@ -65,15 +65,17 @@
                         <label for="">Speciality
                           <input type="text" class="inputfield" name="speciality" value="" placeholder="Speciality">
                         </label>
-                        <div id="finland"  class="hidelabels">
+                        <div id="svn" class="invisible">
+                          <label for="">SV-number
+                            <input type="text" pattern="\d*" class="inputfield" id="svn" name="svn" value="" placeholder="SVN">
+                          </label>
+                        </div>
+                        <div id="finland" >
                           <label for="">Workplace
                             <input type="text" class="inputfield" name="workplace" value="" placeholder="Workplace">
                           </label>
-                          <label for="" class="hidelabels">City
+                          <label for="">City
                             <input type="text" class="inputfield" name="city" value="" placeholder="City">
-                          </label>
-                          <label for="" class="hidelabels">SV-number
-                            <input type="text" pattern="\d*" class="inputfield" id="svn" name="svn" value="" placeholder="SVN">
                           </label>
                         </div>
                         <input class="button buttonhalf" type="submit" name="nextbutton" value="Next" onclick="validateForm(event)">

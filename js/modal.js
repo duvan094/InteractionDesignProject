@@ -76,7 +76,9 @@ function selectChange(){
   var selectMenu = document.getElementById( "professions" );
   if(selectMenu.value == "Doctor"){
     document.getElementById("finland").classList.add("invisible");
+    document.getElementById("svn").classList.remove("invisible");
   }else{
     document.getElementById("finland").classList.remove("invisible");
+    document.getElementById("svn").classList.add("invisible");
   }
 };

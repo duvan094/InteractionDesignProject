@@ -139,6 +139,7 @@ input:focus, #professions:focus{
   box-sizing: border-box;
   width: 420px;
   overflow:hidden;
+  position: relative;
 }
 
 .card-padding{
@@ -207,4 +208,26 @@ input:focus, #professions:focus{
 #sign-in.selected::after{
   right:0;
   bottom:5px;
+}
+
+#progress{
+  display:block;
+  height:11px;
+  width:100%;
+  background:#CCC;
+  bottom:0;
+  position:absolute;
+}
+
+.progress-part{
+  width:0%;
+  height:100%;
+  background:#FF7C75;
+  float:left;
+  transition: width 0.3s ease-in-out;
+  transform:translateZ(0);
+}
+
+.progress-part.done{
+  width:calc(100%/3);
 }

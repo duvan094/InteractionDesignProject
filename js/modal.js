@@ -5,6 +5,9 @@ var signForm = document.getElementById("signForm");
 
 var cardContainer = document.getElementById("cardContainer");
 
+var progressed = document.querySelectorAll(".progress-part");
+
+var previousCard = 0;
 
 function toggleSignIn(){
   document.getElementById("sign-in").classList.add("selected");
@@ -62,7 +65,24 @@ function nextScreen(container,index){
   var outerSlider = document.getElementById(container);
   var length = outerSlider.children.length;
   outerSlider.style.transform = "translate(" + (index/length)*-100 + "%, 0)";
+  if(document.getElementById(container) == document.getElementById("signUpCont")){
+    console.log("hej");
+    updateProgressBar(index);
+  }
 };
+
+
+function updateProgressBar(index){
+  if(index < previousCard){
+    for(var i = index; i <= previousCard; i++){//Clear all progress containers that are above current card.
+      progressed[i].classList.remove("done");
+    }
+  }
+  progressed[index].classList.add("done");
+  previousCard = index;
+
+}
+
 
 document.getElementById("modal").children[0].addEventListener("click",function(event){
   event.stopPropagation();

@@ -49,18 +49,19 @@
 }
 
 .slider-progress button{
-  background:#000;
+  background:rgba(0,0,0,0);
   border: 2px #000 solid;
   border-radius:50%;
   width:16px;
   height:16px;
+  padding:0;
   margin:0 5px;
   cursor: pointer;
   transition: 0.2s ease-in-out background;
 }
 
 .slider-progress button.active{
-  background:#FFF;
+  background:rgba(0,0,0,1);
 }
 
 .slideButton span{

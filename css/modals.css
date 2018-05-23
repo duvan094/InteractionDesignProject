@@ -127,6 +127,7 @@ input:focus, #professions:focus{
   float: left;
   box-sizing: border-box;
   width: 420px;
+  overflow:hidden;
 }
 
 .card-padding{

@@ -26,15 +26,6 @@ function resizeCards(){
   }
 }
 
-/*
-var cards = document.querySelectorAll(".card");
-
-for(var i = 1; i<cards.length; i++){
-  cards[i].classList.add("invisible");
-}
-
-cards[0].classList.add("visible");
-*/
 
 
 function toggleSignIn(){
@@ -49,7 +40,8 @@ function toggleSignUp(){
   nextScreen('logInSignUpCont',1);
 }
 
-function openModal(){
+function openModal(event){
+  event.preventDefault();
   document.getElementById("modal").classList.add("visible");
   document.getElementById("modal").classList.remove("invisible");
 }
@@ -102,7 +94,16 @@ function checkCredentials(response){
     for(var i = 0; i < response.length; i++){//Look through json string if any valid user is found
       var user = response[i];
 
-      if(form.profession.value == "doctor"){
+      if(form.profession.value == "doctor" && form.svnumber.disabled !== true){
+
+
+            for(var i = 0; i<finland.length; i++){
+              finland[i].disabled = true;
+            }
+
+            for(var i = 0; i<svn.length; i++){
+              svn[i].disabled = false;
+            }
 
         if(form.firstName.value == user.firstName && form.lastName.value == user.lastName && form.profession.value == user.profession && form.speciality.value == user.speciality  && form.svnumber.value == user.svnumber){
           return true;

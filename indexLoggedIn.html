@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pharmacutical Inc.</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Jacob Duvander, Axel Tidehorn, Mihir CHouhan">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <a href="index.html"><img class="logo" src="img/logo.svg" alt="logo"></a>
+        <button id="hamburgerBtn" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+        </button>
+        <nav>
+          <form action="">
+            <input id="search" class="inputfield" type="text" placeholder="Search">
+          </form>
+          <ul>
+            <li>
+              <a href="" class="expandButton">Education</a>
+              <ul>
+                <li><a href="">Med Eds</a></li>
+                <li><a href="">eLearning</a></li>
+                <li><a href="">EdsVideos</a></li>
+                <li><a href="">EdsSlides</a></li>
+                <li><a href="networkevents.html">Network Events</a></li>
+                <li><a href="">Eds Forum</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="" class="expandButton">Therapy</a>
+              <ul>
+                <li><a href="">Oncology</a></li>
+                <li><a href="">Diabetes</a></li>
+                <li><a href="">Respiratory</a></li>
+                <li><a href="">Cardio Vascular</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="" class="expandButton">Products</a>
+              <ul>
+                <li><a href="">Oncology</a></li>
+                <li><a href="">Diabetes</a></li>
+                <li><a href="">Respiratory</a></li>
+                <li><a href="">Cardio Vascular</a></li>
+                <li><a href="">All Products</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="" class="expandButton">Order</a>
+              <ul>
+                <li><a href="">Order material</a></li>
+                <li><a href="">How to order</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a href="" class="my-page">
+            <img src="img/profile-img.svg" alt="profile-img">
+            <p>My page</p>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <section class="menu-overlay invisible" id="menu-overlay">
+    </section>
+
+
+    <div class="hero-container">
+      <button class="slideButton" onclick="previousSlide();">
+        <span></span>
+        <span></span>
+      </button>
+      <button class="slideButton" onclick="nextSlide();">
+        <span></span>
+        <span></span>
+      </button>
+      <div id="sliderProgress" class="slider-progress">
+
+      </div>
+      <div class="hero-slider">
+        <figure class="hero" style="background:url('img/researching.jpg'); background-size:cover; background-position:top center;">
+          <div class="text-container">
+            <h2 class="h1">Feeling <b>hurt?</b></h2>
+            <p>
+              Who hurt you? We don't care. But we got remedies of all kinds that might
+              ease your pain.
+            </p>
+            <a href="" class="button">Read more</a>
+          </div>
+        </figure>
+        <figure class="hero" style="background:url('img/operating.jpeg'); background-size:cover; background-position:top center;">
+          <div class="text-container">
+            <h2 class="h1">Are you <b>dying?</b></h2>
+            <p>
+              Don't worry, everyone does! Did you know, nearly a 100% of people who have breathed
+              air are dead. Click below to find out more.
+            </p>
+            <a href="" class="button">Read more</a>
+          </div>
+        </figure>
+        <figure class="hero" style="background:url('img/pills.jpeg'); background-size:cover; background-position:top center;">
+          <div class="text-container">
+            <h2 class="h1">We got <b>penicillin!</b></h2>
+            <p>
+              You can count yourself lucky for living in a first world country with affordable health care!
+              We got just the thing for you!
+            </p>
+            <a href="" class="button">Read more</a>
+          </div>
+        </figure>
+      </div>
+
+    </div>
+    <main>
+      <ul class="post-grid">
+        <li>
+          <a href="">
+            <figure style="background:url('img/studying.jpeg'); background-size:cover; background-position:center;"></figure>
+          </a>
+          <a href="">
+            <h3>News from Pharmacutical Inc.</h3>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, cupiditate dolorum culpa quia.
+          </p>
+        </li>
+        <li>
+          <a href="">
+            <figure style="background:url('img/blog.jpeg'); background-size:cover; background-position:center;"></figure>
+          </a>
+          <a href="">
+            <h3>Blog</h3>
+          </a>
+          <p>
+            YO WHAT IS UP GUYS it's ya boi A-Z and do I got something sick to tell you...
+          </p>
+        </li>
+        <li>
+          <a href="">
+            <figure style="background:url('img/science.jpeg'); background-size:cover; background-position:center;"></figure>
+          </a>
+          <a href="">
+            <h3>Science news</h3>
+          </a>
+          <p>
+            Did you know that we now have the ability to attach a cats tail to a dogs body?
+          </p>
+        </li>
+      </ul>
+
+    </main>
+
+    <footer>
+      <div class="footer-wrapper">
+        <ul>
+          <h4>Contact</h4>
+          <li><a href="">Contact us</a></li>
+          <li><a href="">Customer service</a></li>
+          <li><a href="">FAQ</a></li>
+        </ul>
+        <ul>
+          <h4>About</h4>
+          <li><a href="">About Pharmacutical Inc.</a></li>
+          <li><a href="">Sustainability</a></li>
+          <li><a href="">Collaboration</a></li>
+          <li><a href="">Press material</a></li>
+          <li><a href="">Board and management</a></li>
+        </ul>
+        <ul>
+          <h4>Newsletter</h4>
+          <li><a href="">Sign up</a></li>
+          <li><a href="">About newsletter</a></li>
+          <li><a href="">Tip a friend</a></li>
+        </ul>
+      </div>
+      <a href=""><img class="logo" src="img/logo-monocromatic.svg" alt="logo"></a>
+    </footer>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+
+  </body>
+</html>

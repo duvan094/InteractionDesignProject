@@ -26,7 +26,7 @@
   background: #ffffff;
   overflow: hidden;
   transform:scale(1,1);
-  transition: 0.2s ease-in-out transform;
+  transition: 0.2s ease-in-out transform, 0.2s ease-in-out height;
   max-width: 420px;
 }
 
@@ -123,6 +123,31 @@ input:focus, #professions:focus{
   display: block;
 }
 
+form label.error input, form label.error #professions{
+  border:solid 1px #D42E1E;
+  background:#E7B9AD;
+  color:#D42E1E;
+}
+
+.error-message{
+  max-height: 0;
+  overflow: hidden;
+  width:100%;
+  color:#D42E1E;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 0.8em;
+  margin:-5px 0 11px 0;
+  transform: translateZ(0);
+  transition: max-height 0.2s ease-in-out, margin 0.2s ease-in-out;
+}
+
+form label.error .error-message{
+  max-height: 100px;
+}
+
+
+
 #professions {
   padding: 7px 7px;
   color: #6e6e6e;
@@ -131,7 +156,7 @@ input:focus, #professions:focus{
 #navbuttons {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .card{
@@ -139,8 +164,9 @@ input:focus, #professions:focus{
   float: left;
   box-sizing: border-box;
   width: 420px;
-  overflow:hidden;
   position: relative;
+  overflow:hidden;
+  transition: max-height 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 
 .card-padding{
@@ -158,6 +184,10 @@ input:focus, #professions:focus{
   width:840px;
 }
 
+#logInSignUpCont{
+
+}
+
 #signUpCont{
   width: 1260px;
 }
@@ -166,7 +196,7 @@ input:focus, #professions:focus{
 #finland,#svn{
   overflow:hidden;
   position:relative;
-  max-height: 150px;
+  max-height:200px;
   transition: 0.2s ease-in-out max-height;
 }
 
@@ -231,4 +261,12 @@ input:focus, #professions:focus{
 
 .progress-part.done{
   width:calc(100%/3);
+}
+
+.card.invisible{
+  display:none;
+}
+
+.card.visible{
+  display:block;
 }

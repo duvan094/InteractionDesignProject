@@ -52,46 +52,53 @@
                   </div>
                   <ul id="signUpCont" class="modal-slider">
                     <li class="card card-padding">
-                      <form class="" action="index.html" method="post">
+                      <form name="credentialsForm">
                         <label>
                           <p>First name</p>
-                          <input type="text" class="inputfield" name="firstname" value="" placeholder="First name">
+                          <input type="text" class="inputfield" name="firstName" value="" placeholder="First name">
+                          <p class="error-message">Please enter your first name.</p>
                         </label>
                         <label>
                           <p>Last name</p>
-                          <input type="text" class="inputfield" name="lastname" value="" placeholder="Last name">
+                          <input type="text" class="inputfield" name="lastName" value="" placeholder="Last name">
+                          <p class="error-message">Please enter your last name.</p>
                         </label>
                         <label>
                           <p>Profession</p>
-                          <select id="professions" name="professions" onchange="selectChange()">
+                          <select id="professions" name="profession" onchange="selectChange()">
                             <option value="" disabled selected hidden>Profession</option>
-                            <option value="Doctor">Doctor</option>
-                            <option value="">Nurse</option>
-                            <option value="">Medic</option>
-                            <option value="">Surgeon</option>
+                            <option value="doctor">Doctor</option>
+                            <option value="nurse">Nurse</option>
+                            <option value="medic">Medic</option>
+                            <option value="surgeon">Surgeon</option>
                           </select>
+                          <p class="error-message">Please enter your profession.</p>
                         </label>
                         <label>
                           <p>Speciality</p>
                           <input type="text" class="inputfield" name="speciality" value="" placeholder="Speciality">
+                          <p class="error-message">Please enter your speciality.</p>
                         </label>
                         <div id="svn" class="invisible">
                           <label>
                             <p>SV-number</p>
-                            <input type="text" pattern="\d*" class="inputfield" id="svn" name="svn" value="" placeholder="SVN">
+                            <input type="text" pattern="\d*" class="inputfield" id="svn" name="svnumber" value="" disabled placeholder="SVN">
+                            <p class="error-message">Please enter your SV-number.</p>
                           </label>
                         </div>
                         <div id="finland" >
                           <label>
                             <p>Workplace</p>
                             <input type="text" class="inputfield" name="workplace" value="" placeholder="Workplace">
+                            <p class="error-message">Please enter your workplace.</p>
                           </label>
                           <label>
                             <p>City</p>
                             <input type="text" class="inputfield" name="city" value="" placeholder="City">
+                            <p class="error-message">Please enter your city.</p>
                           </label>
                         </div>
-                        <input class="button buttonhalf" type="submit" name="nextbutton" value="Next" onclick="validateForm(event)">
+                        <input class="button buttonhalf" type="submit" name="nextbutton" value="Next" onclick="enterCredentials(event)">
                       </form>
                     </li>
                     <li class="card card-padding">
@@ -109,7 +116,6 @@
                           <input type="password" class="inputfield" name="confirm" value="" placeholder="Confirm password">
                         </label>
                         <div id="navbuttons">
-                          <button class="button buttonhalf" type="button" name="backbutton" onclick="nextScreen('signUpCont',0)">Go back</button>
                           <input type="submit" class="button buttonhalf" name="nextbutton" onclick="submitEmailPw(event)" value="Next">
                         </div>
                       </form>

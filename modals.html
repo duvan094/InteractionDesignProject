@@ -102,18 +102,21 @@
                       </form>
                     </li>
                     <li class="card card-padding">
-                      <form class="" action="index.html" method="post">
+                      <form name="emailPwForm">
                         <label>
                           <p>E-mail</p>
-                          <input type="text" class="inputfield" name="e-mail" value="" placeholder="E-mail adress">
+                          <input type="email" class="inputfield" name="email" value="" placeholder="E-mail adress">
+                          <p class="error-message">Please enter a valid e-mail address.</p>
                         </label>
                         <label>
                           <p>Password</p>
-                          <input type="password" class="inputfield" name="password" value="" placeholder="Password">
+                          <input type="password" class="inputfield" name="pw" value="" placeholder="Password">
+                          <p class="error-message">Please enter a password.</p>
                         </label>
                         <label>
                           <p>Confirm password</p>
-                          <input type="password" class="inputfield" name="confirm" value="" placeholder="Confirm password">
+                          <input type="password" class="inputfield" name="pwConfirm" value="" placeholder="Confirm password">
+                          <p class="error-message">Please please write the password again here.</p>
                         </label>
                         <div id="navbuttons">
                           <input type="submit" class="button buttonhalf" name="nextbutton" onclick="submitEmailPw(event)" value="Next">

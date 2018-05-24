@@ -123,8 +123,24 @@ function checkCredentials(response){
 function submitEmailPw(event){
   event.preventDefault();
 
-  var email = "duvan.der@live.se";
-  if(validEmail(email) && validPassword()){
+  var form = document.forms.emailPwForm;
+
+  var valid = true;
+
+  for(var i = 0; i < form.length; i++){//Check so that all fields are filled.
+    if(!form[i].disabled){
+
+      if(form[i].value === ""){
+        valid = false;
+        form[i].parentNode.classList.add("error");
+      }else{
+        form[i].parentNode.classList.remove("error");
+      }
+    }
+  }
+
+
+  if(validEmail(form.email.value) && form.pw.value == form.pwConfirm.value){
     nextScreen('signUpCont',2);
   }else{
     console.log("Write a valid email and password dammit!");
@@ -137,9 +153,6 @@ function validEmail(email){//Regex email validation
 
 }
 
-function validPassword(){
-  return true;
-}
 
 function nextScreen(container,index){
   var outerSlider = document.getElementById(container);

@@ -48,10 +48,13 @@ main{
   margin-bottom: 44px;
 }
 
-.post-grid li:hover a{
+.post-grid li a{
   color:#579ad4;
 }
 
+.post-grid li:hover a{
+  color:#497FA0;
+}
 
 .post-grid figure{
   width: 100%;

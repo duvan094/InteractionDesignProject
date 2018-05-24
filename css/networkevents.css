@@ -34,13 +34,14 @@ article{
 
 .eventList > li{
   box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-top:11px;
 }
 
 .eventtitle{
   cursor: pointer;
   background: white;
   padding: 11px 22px;
-  margin-top: 11px;
   display: flex;
   border-bottom: solid 2px #3CA3FF;
   position: relative;
@@ -62,7 +63,6 @@ article{
   pointer-events: none;
   text-overflow: ellipsis;
 }
-
 
 .eventtitle p:first-child{
   width:auto;
@@ -104,10 +104,19 @@ article{
 
 .eventSlider{
   max-height:0;
-  overflow:hidden;
+  overflow: hidden;
   transition: 0.2s ease-in-out;
+  transform:translate(0,0);
+  display: flex;
+  align-items: center;
+  background: #FFF
+}
+
+.eventSlider li {
+  float: left;
+  box-sizing: border-box;
 }
 
 .eventSlider.clicked{
-  max-height:300px;
+  max-height:350px;
 }

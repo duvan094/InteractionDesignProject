@@ -3,7 +3,7 @@
 <head>
     <title>Pharmacutical Inc.</title>
     <meta charset="utf-8">
-    <meta name="author" content="Jacob Duvander, Axel Tidehorn, Mihir CHouhan">
+    <meta name="author" content="Jacob Duvander, Axel Tidehorn, Mihir Chouhan">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
@@ -95,19 +95,19 @@
             <p>09/06/2018</p>
             <p>Doctor mingle</p>
           </div>
-          <ul class="eventSlider">
+          <ul class="eventSlider" id="slider1">
             <li class="eventinfo">
               <h3>Location</h3>
               <p>20 people attending</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irur
                 dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt</p>
-              <button type="button" name="attend" class="attendbutton">Attend Event</button>
+              <button type="button" name="attend" class="attendbutton" onclick="eventConf('slider1',1)">Attend Event</button>
             </li>
             <li class="eventconfirmation">
               <h3>You will attend this event!</h3>
               <p>A confirmation e-mail will be sent to you</p>
-              <button type="button" name="close" class="attendbutton ">Okay</button>
+              <button type="button" name="close" class="attendbutton" onclick="closeEvent(event)">Okay</button>
             </li>
           </ul>
         </li>
@@ -117,19 +117,19 @@
             <p>15/06/2018</p>
             <p>Hot Single doctors in your area</p>
           </div>
-          <ul class="eventSlider">
+          <ul class="eventSlider" id="slider2">
             <li class="eventinfo">
               <h3>Location</h3>
               <p>20 people attending</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irur
                 dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt</p>
-              <button type="button" name="attend" class="attendbutton">Attend Event</button>
+              <button type="button" name="attend" class="attendbutton" onclick="eventConf('slider2',1)">Attend Event</button>
             </li>
             <li class="eventconfirmation">
               <h3>You will attend this event!</h3>
               <p>A confirmation e-mail will be sent to you</p>
-              <button type="button" name="close" class="attendbutton ">Okay</button>
+              <button type="button" name="close" class="attendbutton" onclick="closeEvent(event)">Okay</button>
             </li>
           </ul>
         </li>

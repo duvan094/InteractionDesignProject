@@ -1,5 +1,4 @@
 var outerSlider = document.getElementById("outerSlider");
-console.log(outerSlider);
 
 var signForm = document.getElementById("signForm");
 
@@ -8,6 +7,25 @@ var cardContainer = document.getElementById("cardContainer");
 var progressed = document.querySelectorAll(".progress-part");
 
 var previousCard = 0;
+
+var cards = document.querySelectorAll(".card");
+
+window.addEventListener("resize",function(){
+  resizeCards();
+});
+
+resizeCards();
+
+function resizeCards(){
+  var element = document.getElementById("modal-popup");
+  var width = element.offsetWidth;
+
+  for(var i = 0; i<cards.length; i++){
+    cards[i].style.width = width + "px";
+    cards[i].parentNode.style.width = width * cards[i].parentNode.children.length + "px";
+  }
+}
+
 
 function toggleSignIn(){
   document.getElementById("sign-in").classList.add("selected");

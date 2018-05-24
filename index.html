@@ -169,7 +169,9 @@
         <ul id="outerSlider" class="modal-slider">
           <li class="card card-padding" id="welcomecard">
             <h2>Welcome!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Please choose if you are a Health Care Professional or a member of the public, or close this window <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+              continue to our public site.
+            </p>
             <button class="button" type="button" name="HCP" onclick="nextScreen('outerSlider',1)">HCP</button>
             <button class="button" type="button" name="Public" onclick="closeModal()">Public</button>
           </li>
@@ -276,7 +278,9 @@
                 </li>
                 <li class="card card-padding">
                   <h2>Thank you!</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>
+                    Your account has been successfully created! A confirmation e-mail has been sent to your enterend e-mail.
+                  </p>
                   <figure>img</figure>
                   <a href="indexLoggedIn.html" class="button buttonhalf" type="button" onclick="closeModal()">Continue to site</a>
                 </li>

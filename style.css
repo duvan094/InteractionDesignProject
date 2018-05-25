@@ -52,6 +52,11 @@ main{
   color:#579ad4;
 }
 
+.post-grid li a h3::after{
+  content:"»";
+  padding-left: 0.2em;
+}
+
 .post-grid li:hover a{
   color:#497FA0;
 }

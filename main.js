@@ -46,6 +46,7 @@ function closeExpandMenu(){
   document.querySelector("header").style.height = "";
 }
 
+/*For desktop*/
 function expandMenu(event){
   event.preventDefault();
   var element = event.target.parentNode;

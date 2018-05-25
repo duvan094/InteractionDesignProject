@@ -70,7 +70,6 @@ function expandMenu(event){
     document.getElementById("menu-overlay").classList.remove("invisible");
     document.getElementById("menu-overlay").classList.add("visible");
   }
-
 }
 
 /*A function for toggling the expandable menu (For mobile hamburger menu)*/

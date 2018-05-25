@@ -99,8 +99,19 @@ article{
 }
 .eventinfo > h3{
   margin: 0;
+  text-transform: capitalize;
 }
 
+.eventinfo > h3::before{
+  content: "";
+  display: inline-block;
+  height:1em;
+  width:1em;
+  background:url("../img/place.svg");
+  background-size:auto 100%;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
 
 .eventSlider{
   max-height:0;

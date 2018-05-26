@@ -59,9 +59,8 @@
         <span></span>
         <span></span>
       </button>
-      <div id="sliderProgress" class="slider-progress">
+      <div id="sliderProgress" class="slider-progress"></div>
 
-      </div>
       <div class="hero-slider">
         <figure class="hero" style="background:url('img/researching.jpg'); background-size:cover; background-position:top center;">
           <div class="text-container">
@@ -94,8 +93,8 @@
           </div>
         </figure>
       </div>
-
     </div>
+
     <main>
       <ul class="post-grid">
         <li>
@@ -168,9 +167,9 @@
 
         <ul id="outerSlider" class="modal-slider">
           <li class="card card-padding" id="welcomecard">
-            <h2>Welcome!</h2>
-            <p>Please choose if you are a Health Care Professional or a member of the public, or close this window <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-              continue to our public site.
+            <img class="logo" src="img/logo.svg" alt="">
+            <p>
+              Please choose if you are a HCP(Health Care Professional) or a public visitor.
             </p>
             <button class="button" type="button" name="HCP" onclick="nextScreen('outerSlider',1)">HCP</button>
             <button class="button" type="button" name="Public" onclick="closeModal()">Public</button>

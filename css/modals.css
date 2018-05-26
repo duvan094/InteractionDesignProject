@@ -270,3 +270,14 @@ form label.error .error-message{
 .card.visible{
   display:block;
 }
+
+#welcomecard img{
+  display: block;
+  margin:22px auto 22px auto;
+  width:100%;
+  max-width: 250px;
+}
+
+#welcomecard p{
+  text-align: center;
+}

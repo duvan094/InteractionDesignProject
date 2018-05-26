@@ -97,7 +97,7 @@ article{
 
 .eventinfo > p{
 }
-.eventinfo > h3{
+.eventinfo > h3,.eventconfirmation > h3{
   margin: 0;
   text-transform: capitalize;
 }
@@ -130,4 +130,8 @@ article{
 
 .eventSlider.clicked{
   max-height:350px;
+}
+
+.attendbutton{
+  margin-bottom:0;
 }

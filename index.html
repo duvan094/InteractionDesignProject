@@ -183,10 +183,10 @@
 
             <ul id="logInSignUpCont" class="modal-slider">
               <li class="card card-padding">
-                <form class="" action="index.html" method="post">
+                <form name="loginForm" action="index.html" method="post">
                   <label>
                     <p>E-mail</p>
-                    <input type="text" required class="inputfield" class="inputfield" name="e-mail" value="" placeholder="E-mail adress" onblur="checkIfEmpty(event)">
+                    <input type="email" required class="inputfield" class="inputfield" name="email" value="" placeholder="E-mail adress" onblur="checkIfEmpty(event)">
                     <p class="error-message">Please enter your e-mail address.</p>
                   </label>
                   <label>
@@ -194,7 +194,8 @@
                     <input type="password" required class="inputfield" name="password" value="" placeholder="Password" onblur="checkIfEmpty(event)">
                     <p class="error-message">Please enter your password.</p>
                   </label>
-                  <input type="submit" class="button" name="signin" value="Sign in">
+                  <input onclick="login(event)" type="submit" class="button" name="signin" value="Sign in">
+                  <p id="loginError" class="form-error">Failed to log in.</p>
                 </form>
               </li>
 

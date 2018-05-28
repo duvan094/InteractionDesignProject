@@ -222,3 +222,33 @@ function checkIfEmpty(event){//OnBlur event
     event.target.parentElement.classList.remove("error");
   }
 }
+
+
+function login(event){
+  event.preventDefault();
+  console.log(event);
+
+  var form = document.forms.loginForm;
+
+  var valid = true;
+
+  for(var i = 0; i < form.length; i++){//Check so that all fields are filled.
+      if(form[i].value === ""){
+        valid = false;
+        form[i].parentNode.classList.add("error");
+      }else{
+        form[i].parentNode.classList.remove("error");
+      }
+  }
+
+
+  if(valid){
+    if(validEmail(form.email.value)){
+      document.getElementById("emailPwError").classList.remove("visible");
+      window.location.href = "indexLoggedIn.html";
+    }else{
+      document.getElementById("loginError").classList.add("visible");
+    }
+  }
+
+}

@@ -63,9 +63,10 @@ function enterCredentials(event){
       var response = JSON.parse(this.responseText);
 
       if(checkCredentials(response)){
+        document.getElementById("formError").classList.remove("visible");
         nextScreen('signUpCont',1);
       }else{
-        console.log("error");
+        document.getElementById("formError").classList.add("visible");
       }
     }
   };
@@ -80,7 +81,6 @@ function checkCredentials(response){
 
   for(var i = 0; i < form.length; i++){//Check so that all fields are filled.
     if(!form[i].disabled){
-
       if(form[i].value === ""){
         valid = false;
         form[i].parentNode.classList.add("error");
@@ -96,28 +96,26 @@ function checkCredentials(response){
 
       if(form.profession.value == "doctor" && form.svnumber.disabled !== true){
 
+        for(var x = 0; x<finland.length; x++){
+          finland[x].disabled = true;
+        }
 
-            for(var i = 0; i<finland.length; i++){
-              finland[i].disabled = true;
-            }
+        for(var x = 0; x<svn.length; x++){
+          svn[x].disabled = false;
+        }
 
-            for(var i = 0; i<svn.length; i++){
-              svn[i].disabled = false;
-            }
-
-        if(form.firstName.value == user.firstName && form.lastName.value == user.lastName && form.profession.value == user.profession && form.speciality.value == user.speciality  && form.svnumber.value == user.svnumber){
+        if(form.firstName.value.toLowerCase() == user.firstName.toLowerCase() && form.lastName.value.toLowerCase() == user.lastName.toLowerCase() && form.profession.value.toLowerCase() == user.profession.toLowerCase() && form.speciality.value.toLowerCase() == user.speciality.toLowerCase()  && form.svnumber.value == user.svnumber){
           return true;
         }
 
       }else{
-
-        if(form.firstName.value == user.firstName && form.lastName.value == user.lastName && form.profession.value == user.profession && form.speciality.value == user.speciality  && form.workplace.value == user.workplace && form.city.value == user.city){
+        if(form.firstName.value.toLowerCase() == user.firstName.toLowerCase() && form.lastName.value.toLowerCase() == user.lastName.toLowerCase() && form.profession.value.toLowerCase() == user.profession.toLowerCase() && form.speciality.value.toLowerCase() == user.speciality.toLowerCase()  && form.workplace.value.toLowerCase() == user.workplace.toLowerCase() && form.city.value == user.city){
           return true;
         }
       }
     }
+    return false;//if no matching results found.
   }
-  return false;//if no matching results found.
 }
 
 
@@ -142,16 +140,16 @@ function submitEmailPw(event){
 
 
   if(validEmail(form.email.value) && form.pw.value == form.pwConfirm.value){
+    document.getElementById("emailPwError").classList.remove("visible");
     nextScreen('signUpCont',2);
   }else{
-    console.log("Write a valid email and password dammit!");
+    document.getElementById("emailPwError").classList.add("visible");
   }
 }
 
 function validEmail(email){//Regex email validation
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
-
 }
 
 
@@ -213,5 +211,14 @@ function selectChange(){
     for(var i = 0; i<svn.length; i++){
       svn[i].disabled = true;
     }
+  }
+}
+
+
+function checkIfEmpty(event){//OnBlur event
+  if(event.target.value === ""){
+    event.target.parentElement.classList.add("error");
+  }else{
+    event.target.parentElement.classList.remove("error");
   }
 }

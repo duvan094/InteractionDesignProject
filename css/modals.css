@@ -59,6 +59,7 @@
   transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   cursor:pointer;
   white-space: nowrap;
+  text-align: center;
   border-radius:5px;
   display: block;
   box-sizing: border-box;
@@ -87,9 +88,7 @@
 }
 .buttonhalf{
   width: 45%;
-  float:right;
   box-sizing: border-box;
-
 }
 
 #modalheader {
@@ -200,6 +199,10 @@ form label.error .error-message{
   transition: 0.2s ease-in-out max-height;
 }
 
+#svn input{
+  width:5em;
+}
+
 #finland.invisible, #svn.invisible{
   max-height:0;
 }
@@ -280,4 +283,25 @@ form label.error .error-message{
 
 #welcomecard p{
   text-align: center;
+}
+
+.submit-container{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.form-error{
+  color:#D42E1E;
+  font-weight: 500;
+  font-size: 0.8em;
+  padding-right:11px;
+  opacity:0;
+  transition:0.2s ease-in-out opacity;
+}
+
+.form-error.visible{
+  opacity:1;
 }
